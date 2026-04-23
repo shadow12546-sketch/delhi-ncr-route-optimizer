@@ -3,7 +3,7 @@ import { MapContainer, TileLayer, Polyline, CircleMarker, Popup, useMap } from "
 import "leaflet/dist/leaflet.css";
 import axios from "axios";
 
-const API = "http://127.0.0.1:8000";
+const API = "https://nexuschain-api.onrender.com";
 
 const CITY_COORDS = {
   Delhi:     [28.6139, 77.2090],

@@ -1,70 +1,132 @@
-# Getting Started with Create React App
+# 🚚 NexusChain — Delhi NCR Logistics Route Optimizer
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![Python](https://img.shields.io/badge/Python-3.8+-blue)
+![FastAPI](https://img.shields.io/badge/FastAPI-0.100+-green)
+![React](https://img.shields.io/badge/React-18.0+-61DAFB)
+![ML](https://img.shields.io/badge/ML-RandomForest-orange)
 
-## Available Scripts
+## 📌 About
+NexusChain is an intelligent logistics route optimization system for the Delhi NCR region. It uses Machine Learning to predict delivery risks, optimize routes, and minimize delays across 8 major cities in Delhi NCR.
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## 🌟 Features
+- 🗺️ **Smart Route Optimization** — Dijkstra algorithm with ML-based risk penalty scoring
+- 🤖 **ML Risk Prediction** — Random Forest models trained on 7000 real logistics records
+- 📊 **Delay Probability** — Predicts delivery delay probability and estimated time delay
+- 🌦️ **Weather & Traffic Aware** — Considers weather, traffic levels, peak hours
+- 🏙️ **8 Cities Covered** — Delhi, Noida, Gurugram, Faridabad, Ghaziabad, Meerut, Sonipat, Mathura
+- 📈 **Real-time Analytics** — Live shipment stats and feature importance
+- 🚗 **Multi-vehicle Support** — Van, Truck, Bike and more
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🛠️ Tech Stack
 
-### `npm test`
+### Backend
+| Technology | Purpose |
+|-----------|---------|
+| FastAPI | REST API framework |
+| Scikit-learn | ML models (Random Forest) |
+| Pandas & NumPy | Data processing |
+| Pydantic | Request validation |
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Frontend
+| Technology | Purpose |
+|-----------|---------|
+| React.js | UI framework |
+| JavaScript | Frontend logic |
+| CSS | Styling |
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 🤖 ML Models
+- **RandomForestClassifier** — Predicts risk level (High/Medium/Low)
+- **RandomForestRegressor (x2)** — Predicts delay probability and time delay
+- **Training Data** — 7000 Delhi NCR logistics records
+- **Features Used:**
+  - Distance (km)
+  - Congestion index
+  - Hour of day
+  - Peak hour flag
+  - Load weight
+  - Route type
+  - Traffic level
+  - Weather condition
+  - Day of week
+  - Vehicle type
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 🏙️ Cities Network
+Delhi - Noida - Ghaziabad - Meerut - Sonipat
+Delhi - Gurugram - Faridabad - Mathura
+Noida - Faridabad - Ghaziabad
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 📁 Project Structure
+delhi-ncr-route-optimizer/
+├── api.py                       # FastAPI backend
+├── route_optimizer.py           # Core optimization algorithm
+├── delhi_ncr_logistics_7000.csv # Dataset
+├── requirements.txt             # Python dependencies
+├── App.js                       # React main component
+├── App.css                      # Styles
+├── index.js                     # React entry point
+├── index.html                   # HTML template
+├── package.json                 # Node dependencies
+└── README.md                    # Documentation
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## ▶️ How to Run
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Backend
+# Install dependencies
+pip install -r requirements.txt
 
-## Learn More
+# Start FastAPI server
+uvicorn api:app --reload
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+API will run at: http://localhost:8000
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Frontend
+# Install dependencies
+npm install
 
-### Code Splitting
+# Start React app
+npm start
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+App will run at: http://localhost:3000
 
-### Analyzing the Bundle Size
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## 🔗 API Endpoints
 
-### Making a Progressive Web App
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| GET | / | API status |
+| POST | /optimize | Optimize route |
+| GET | /stats | Dataset statistics |
+| GET | /shipments | View shipments |
+| GET | /city-risk | City risk scores |
+| GET | /health | Health check |
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+---
 
-### Advanced Configuration
+## 📊 Dataset
+- **Records:** 7,000 logistics entries
+- **Region:** Delhi NCR, India
+- **Features:** Distance, traffic, weather, vehicle type, load weight, delay probability, risk level
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+---
 
-### Deployment
+## 👨‍💻 Author
+**shadow12546-sketch**
+- GitHub: [@shadow12546-sketch](https://github.com/shadow12546-sketch)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+---
 
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## 📄 License
+This project is licensed under the MIT License.

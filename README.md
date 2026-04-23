@@ -66,6 +66,7 @@ Noida - Faridabad - Ghaziabad
 ---
 
 ## 📁 Project Structure
+
 delhi-ncr-route-optimizer/
 ├── api.py                       # FastAPI backend
 ├── route_optimizer.py           # Core optimization algorithm
@@ -78,7 +79,6 @@ delhi-ncr-route-optimizer/
 ├── package.json                 # Node dependencies
 └── README.md                    # Documentation
 
----
 
 ## ▶️ How to Run
 

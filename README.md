@@ -5,6 +5,13 @@
 ![React](https://img.shields.io/badge/React-18.0+-61DAFB)
 ![ML](https://img.shields.io/badge/ML-RandomForest-orange)
 
+## 🚀 Live Demo
+👉 [Click here to view the live app](https://nexuschain-frontend.vercel.app)
+
+**API Backend:** https://nexuschain-api.onrender.com/docs
+
+---
+
 ## 📌 About
 NexusChain is an intelligent logistics route optimization system for the Delhi NCR region. It uses Machine Learning to predict delivery risks, optimize routes, and minimize delays across 8 major cities in Delhi NCR.
 
@@ -68,37 +75,35 @@ Noida - Faridabad - Ghaziabad
 ## 📁 Project Structure
 
 delhi-ncr-route-optimizer/
+├── public/
+│   ├── index.html
+│   ├── manifest.json
+│   ├── favicon.ico
+│   └── robots.txt
+├── src/
+│   ├── App.js
+│   ├── App.css
+│   ├── index.js
+│   └── index.css
+├── api.py
+├── route_optimizer.py
+├── delhi_ncr_logistics_7000.csv
+├── requirements.txt
+├── package.json
+└── README.md
 
-├── api.py                       # FastAPI backend
-├── route_optimizer.py           # Core optimization algorithm
-├── delhi_ncr_logistics_7000.csv # Dataset
-├── requirements.txt             # Python dependencies
-├── App.js                       # React main component
-├── App.css                      # Styles
-├── index.js                     # React entry point
-├── index.html                   # HTML template
-├── package.json                 # Node dependencies
-└── README.md                    # Documentation
-
+---
 
 ## ▶️ How to Run
 
 ### Backend
-# Install dependencies
 pip install -r requirements.txt
-
-# Start FastAPI server
 uvicorn api:app --reload
-
 API will run at: http://localhost:8000
 
 ### Frontend
-# Install dependencies
 npm install
-
-# Start React app
 npm start
-
 App will run at: http://localhost:3000
 
 ---
